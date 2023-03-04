@@ -23,7 +23,7 @@ def checkout():
 @app.route('/info')
 def info():
     quantity=session['strawberry']+session['raspberry']+session['apple']
-    return render_template("checkout.html", quantity = quantity, date_time=datetime.datetime.now())
+    return render_template("checkout.html", quantity = quantity, date_time=datetime.datetime.now().strftime("%d/%m/%Y, %H:%M:%p"))
 
 @app.route('/fruits')         
 def fruits():
